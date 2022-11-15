@@ -9,11 +9,9 @@ numbers의 모든 수는 0 이상 100 이하입니다. */
 function solution(numbers) {
   var array = [];
   for (var i = 0; i < numbers.length; i++) {
-    for (var j = 1; j < numbers.length - 1; j++) {
-      array.push(numbers[i] * numbers[j]);
+    for (var j = i + 1; j < numbers.length; j++) {
+      array.push(numbers[i] + numbers[j]);
     }
   }
-  console.log([...new Set(array)]);
+  return [...new Set(array)].sort((a, b) => a - b);
 }
-
-solution([2, 1, 3, 4, 1]);
