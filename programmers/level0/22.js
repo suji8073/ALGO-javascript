@@ -18,4 +18,11 @@ function solution(my_string, n) {
 	return answer;
 }
 
-console.log(solution("hello", 3));
+function solution1(my_string, n) {
+	return my_string
+		.split("")
+		.map((string) => string.repeat(n))
+		.join("");
+}
+
+console.log(solution1("test", 3));
